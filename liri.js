@@ -17,7 +17,6 @@ function comLine(userSubject,userChoice ) {
           bands(userChoice);
           break;
     case 'spotify-this-song':
-    console.log('hello world' + userChoice);
           music(userChoice);
           break;
     case 'movie-this':
