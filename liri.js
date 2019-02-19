@@ -3,9 +3,9 @@ var Spotify = require("node-spotify-api");
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var axios = require('axios');
-// var fs = require("fs");
-// var request = require('request')
-// var bandsintown = require('bandsintown')
+var fs = require("fs");
+var request = require('request')
+var bandsintown = require('bandsintown')
 var userSubject = process.argv[2];
 var userChoice = process.argv[3];
 
@@ -21,7 +21,7 @@ function comLine(userSubject,userChoice ) {
           break;
     case 'spotify-this-song':
     console.log('hello world' + userChoice);
-          song(userChoice);
+          music(userChoice);
           break;
     case 'movie-this':
           movie_this(userChoice);
@@ -32,7 +32,7 @@ console.log(userChoice)
   }
 }
 
-function song(userSubject){
+function music(userSubject){
   if (userChoice === undefined){
     userChoice = "The Sign"
   }
@@ -79,9 +79,9 @@ function movie_this(userSubject) {
 
     axios.get(queryUrl).then(
       function(response) {
-        console.log("Release Year: " + response.data.Year);
-      }
-    );
+        
+      
+    
     
   
       console.log("=============MOVIE INFO=========")
@@ -94,8 +94,8 @@ function movie_this(userSubject) {
       console.log("Rotten Tomatoes: ",response.data.Ratings[1])
       console.log("IMDB Review: ",response.data.imdbRating)
       console.log("=========================================" + "\n")
-    }
-  
+    })
+  }
 
 
 
@@ -117,10 +117,6 @@ function bands(userChoice){
        };
       });
   };
-
-bands()
-movie_this()
-music()
 
 
 
