@@ -7,4 +7,8 @@ The **_Liri-app_** allows you to searches for information via the node command-l
 -  Then you type the function you want to search under: **spotify-this-song, movie-this or concert this**
 -  Now type the realtive search of the required subject e.g. **node liri.js spotify-this-song _help_**
 
+Below you will find a link to a video that shows how it works
+https://github.com/jjferg/liri-node-app/blob/master/images/video.mov
+
+Here is a photo of the  **node liri.js spotify-this-song _help_** example.
 <img src="images/liri-node-app screen shot 2.png" width=800> 
